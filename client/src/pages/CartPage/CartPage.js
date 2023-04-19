@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { asyncCartDelete, deleteCartItem } from "../../store/cartSlice";
 import StripeCheckout from "react-stripe-checkout";
 import { toast } from "react-toastify";
+import { API_BASE_URL } from "../../config";
 
 toast.configure()
 
@@ -35,7 +36,7 @@ export default function CartPage() {
 
   React.useEffect(() => {
     const makeRequest = async () => {
-      const res = await fetch('${API_BASE_URL}/api/checkout/payment', {
+      const res = await fetch(`${API_BASE_URL}/api/checkout/payment`, {
         method: 'POST',
         headers: {
           'Content-Type' : 'application/json'

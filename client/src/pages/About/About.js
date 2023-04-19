@@ -28,16 +28,6 @@ export default function About() {
         </div>
         <div className="about-row">
           <div className="about-col">
-            <h6>OUR STORIES</h6>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Veritatis non nisi quo, maxime tenetur repellendus modi aspernatur
-              iure deleniti error optio quam odio at officia dicta est eos nemo
-              amet? Nesciunt commodi libero autem officiis eius dicta mollitia.
-              Exercitationem, reprehenderit.
-            </p>
-          </div>
-          <div className="about-col">
             <h6>CONTACTS</h6>
             <p>
               Address:{" "}

@@ -30,14 +30,6 @@ export default function ArekFooter() {
           <Link to={"/wishlist"}>Wishlist</Link>
         </div>
         <div className="footer-col">
-          <h6>ABOUT US</h6>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus,
-            consequuntur magnam atque, ratione maiores sit, praesentium ipsum
-            molestiae aliquid omnis aperiam eligendi vitae fugiat mollitia.
-          </p>
-        </div>
-        <div className="footer-col">
           <h6>CONTACT</h6>
           <p>
             Address:{" "}
