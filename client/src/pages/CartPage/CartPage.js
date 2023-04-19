@@ -28,19 +28,21 @@ export default function CartPage() {
       return null;
     });
     total = parseFloat(total).toFixed(2);
-    tax = Math.floor((total * 10) / 100);
+    tax = Math.floor(total);
     total = parseFloat(total);
     total += tax;
   }
 
   React.useEffect(() => {
     const makeRequest = async () => {
+        console.log(total)
+
       const res = await fetch(`${API_BASE_URL}/api/checkout/payment`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ tokenId: stripeToken.id, amount: total * 100 }),
+        body: JSON.stringify({ tokenId: stripeToken.id, amount: total }),
       });
 
       const data = await res.json();
