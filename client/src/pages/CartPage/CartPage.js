@@ -28,14 +28,14 @@ export default function CartPage() {
       return null;
     });
     total = parseFloat(total).toFixed(2);
-    tax = Math.floor(total);
+    tax = Math.floor((total * 10) / 100);
     total = parseFloat(total);
     total += tax;
   }
 
   React.useEffect(() => {
     const makeRequest = async () => {
-        console.log(total)
+      console.log(total);
 
       const res = await fetch(`${API_BASE_URL}/api/checkout/payment`, {
         method: 'POST',
@@ -92,23 +92,23 @@ export default function CartPage() {
           </div>
           <div className='cartpage-col-right'>
             <p>
-              Subtotal <span>{total - tax}</span>
+              Subtotal <span> ₹{total - tax}</span>
             </p>
             <p>
-              Estimated Shipping <span>{tax}</span>
+              Estimated Shipping <span>₹{tax}</span>
             </p>
             <h3>
-              Total <span>{total}</span>
+              Total <span>₹{total}</span>
             </h3>
             <StripeCheckout
               alipay={true}
               bitcoin={true}
               name='Wookie.'
               image='https://wokiee.reactdemo.hasthemes.com/assets/images/no-placeholder/logo.png'
-              currency='INR'
+              currency='inr'
               billingAddress
               shippingAddress
-              amount={total}
+              amount={total * 100}
               token={onToken}
               stripeKey={
                 'pk_test_51K0KFMGIOFJuO9tJGZUsZARyKWybzpQAL6zcWrZe8awQjyWo75a82Xz7hcg49tVZlxZEMfkQAy47YprQELLDvhWh000YyIa4dO'

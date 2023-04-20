@@ -38,7 +38,7 @@ export default function CartPageSingle({ data, handleDelete }) {
             Size: <span>{data.size}</span>
           </p>
           <p>
-            Price: <span>{data.price.toFixed(2)}</span>
+            Price: <span>₹{data.price.toFixed(2)}</span>
           </p>
         </div>
       </div>
