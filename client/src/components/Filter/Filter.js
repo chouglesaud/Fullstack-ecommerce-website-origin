@@ -13,6 +13,10 @@ export default function Filter() {
     const curPerPage = useSelector(state => state.pagination.productPerPage)
     const [showFilter, setShowFilter] = useState(false);
 
+    const converDollorToRupee = (amount)=>{
+      return amount * 80
+    }
+
     const handleLinkClick = link => {
       window.location.href = link;
     }
@@ -96,19 +100,22 @@ export default function Filter() {
               <Text>
                 <ul>
                   <li className="category-link">
-                  <Link to={'/products?price=50'} onClick={() => handleLinkClick('/products?pricel=0&&priceh=50')}>USD $0-$50</Link>
+                  <Link to={'/products?price=500'} onClick={() => handleLinkClick('/products?pricel=0&&priceh=500')}>₹0-500</Link>
                   </li>
                   <li className="category-link">
-                  <Link to={'/products?price=100'} onClick={() => handleLinkClick('/products?pricel=50&&priceh=100')}>USD $50-$100</Link>
+                  <Link to={'/products?price=1000'} onClick={() => handleLinkClick('/products?pricel=500&&priceh=1000')}>₹50-₹1000</Link>
                   </li>
                   <li className="category-link">
-                  <Link to={'/products?price=150'} onClick={() => handleLinkClick('/products?pricel=100&&priceh=150')}>USD $100-$150</Link>
+                  <Link to={'/products?price=2000'} onClick={() => handleLinkClick('/products?pricel=1000&&priceh=2000')}>₹1000-₹2000</Link>
                   </li>
                   <li className="category-link">
-                  <Link to={'/products?price=200'} onClick={() => handleLinkClick('/products?pricel=150&&priceh=200')}>USD $150-$200</Link>
+                  <Link to={'/products?price=5000'} onClick={() => handleLinkClick('/products?pricel=2000&&priceh=5000')}>₹2000-₹5000</Link>
                   </li>
                   <li className="category-link">
-                  <Link to={'/products?price=250'} onClick={() => handleLinkClick('/products?pricel=200&&priceh=250')}>USD $200-$250</Link>
+                  <Link to={'/products?price=10000'} onClick={() => handleLinkClick('/products?pricel=5000&&priceh=10000')}>₹5000-₹10,000</Link>
+                  </li>
+                  <li className="category-link">
+                  <Link to={'/products?price=20000'} onClick={() => handleLinkClick('/products?pricel=10000&&priceh=20000')}>₹10,000-₹20,000</Link>
                   </li>
                 </ul>
               </Text>
