@@ -5,6 +5,13 @@ const pool = require('../db');
 router.get('/', async (req, res) => {
   try {
     let products = await pool.query('SELECT * FROM products');
+
+    if (req.query.pricel) {
+      const low = parseInt(req.query.pricel);
+      const high = parseInt(req.query.priceh);
+      products = await pool.query('SELECT * FROM products WHERE price >= $1 AND price <= $2', [low, high]);
+    }
+
     if (req.query.search) {
       products = await pool.query('SELECT * FROM products WHERE name ILIKE $1', [`%${req.query.search}%`]);
     }
@@ -14,11 +21,7 @@ router.get('/', async (req, res) => {
       }
       products = await pool.query('SELECT * FROM products WHERE LOWER(gender) = LOWER($1)', [req.query.cat]);
     }
-    if (req.query.pricel) {
-      const low = parseFloat(req.query.pricel) * 80;
-      const high = parseFloat(req.query.priceh) * 80;
-      products = await pool.query('SELECT * FROM products WHERE price >= $1 AND price <= $2', [low, high]);
-    }
+    
     res.status(200).json(products.rows);
   } catch (error) {
     res.status(500).json(error);

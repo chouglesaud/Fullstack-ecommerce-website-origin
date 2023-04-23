@@ -6,7 +6,7 @@ export const getProduct = createAsyncThunk('product/getProduct', async (payload,
   if (payload.cat) {
     url = `${API_BASE_URL}/api/products/?cat=${payload.cat}`;
   } else if (payload.price.priceL) {
-    url = `/api/products/?pricel=${payload.price.priceL}&&priceh=${payload.price.priceH}`;
+    url = `${API_BASE_URL}/api/products/?pricel=${payload.price.priceL}&priceh=${payload.price.priceH}`;
   } else if (payload.search) {
     url = `${API_BASE_URL}/api/products/?search=${payload.search}`;
   }

@@ -22,10 +22,8 @@ router.get('/:id', async (req,res) => {
         const review = await pool.query(
             'SELECT users.first_name, users.last_name, users.avatar, review.title, review.review_desc, review.rating FROM review JOIN users ON users.id = review.user_id WHERE review.product_id = $1', [req.params.id]
         )
-        console.log('review ekta pore')
         res.status(200).json(review.rows)
     } catch (error) {
-        console.log(error)
         res.status(500).json({message : error})
     }
 })

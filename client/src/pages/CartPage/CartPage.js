@@ -35,7 +35,6 @@ export default function CartPage() {
 
   React.useEffect(() => {
     const makeRequest = async () => {
-      console.log(total);
 
       const res = await fetch(`${API_BASE_URL}/api/checkout/payment`, {
         method: 'POST',

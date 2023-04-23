@@ -100,22 +100,22 @@ export default function Filter() {
               <Text>
                 <ul>
                   <li className="category-link">
-                  <Link to={'/products?price=500'} onClick={() => handleLinkClick('/products?pricel=0&&priceh=500')}>₹0-500</Link>
+                  <Link to={'/products?price=500'} onClick={() => handleLinkClick('/products?pricel=0&priceh=500')}>₹0-500</Link>
                   </li>
                   <li className="category-link">
-                  <Link to={'/products?price=1000'} onClick={() => handleLinkClick('/products?pricel=500&&priceh=1000')}>₹50-₹1000</Link>
+                  <Link to={'/products?price=1000'} onClick={() => handleLinkClick('/products?pricel=500&priceh=1000')}>₹500-₹1000</Link>
                   </li>
                   <li className="category-link">
-                  <Link to={'/products?price=2000'} onClick={() => handleLinkClick('/products?pricel=1000&&priceh=2000')}>₹1000-₹2000</Link>
+                  <Link to={'/products?price=2000'} onClick={() => handleLinkClick('/products?pricel=1000&priceh=2000')}>₹1000-₹2000</Link>
                   </li>
                   <li className="category-link">
-                  <Link to={'/products?price=5000'} onClick={() => handleLinkClick('/products?pricel=2000&&priceh=5000')}>₹2000-₹5000</Link>
+                  <Link to={'/products?price=5000'} onClick={() => handleLinkClick('/products?pricel=2000&priceh=5000')}>₹2000-₹5000</Link>
                   </li>
                   <li className="category-link">
-                  <Link to={'/products?price=10000'} onClick={() => handleLinkClick('/products?pricel=5000&&priceh=10000')}>₹5000-₹10,000</Link>
+                  <Link to={'/products?price=10000'} onClick={() => handleLinkClick('/products?pricel=5000&priceh=10000')}>₹5000-₹10,000</Link>
                   </li>
                   <li className="category-link">
-                  <Link to={'/products?price=20000'} onClick={() => handleLinkClick('/products?pricel=10000&&priceh=20000')}>₹10,000-₹20,000</Link>
+                  <Link to={'/products?price=20000'} onClick={() => handleLinkClick('/products?pricel=10000&priceh=20000')}>₹10,000-₹20,000</Link>
                   </li>
                 </ul>
               </Text>
