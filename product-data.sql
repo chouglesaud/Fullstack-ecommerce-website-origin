@@ -95,10 +95,6 @@ CREATE TABLE wishlist (
 );
 
 
-INSERT INTO public.cart (id, user_id, quantity, product_id, total, size) VALUES ('270a2930-d657-4d1a-bcef-6c1f876449dd', 'e5702df2-42d7-4e9e-bab9-0aebbebd7a3d', 4, '6a91c4c7-ca35-4dad-87ad-bea164962c93', 759, 'M');
-INSERT INTO public.cart (id, user_id, quantity, product_id, total, size) VALUES ('dd4d5736-3399-4cbb-b21b-87ad8679f9e7', 'e5702df2-42d7-4e9e-bab9-0aebbebd7a3d', 1, 'f755d55a-827c-4e94-8ab8-7f82711b62e7', 898, 'M');
-
-
 --
 -- TOC entry 3641 (class 0 OID 16743)
 -- Dependencies: 212
@@ -280,36 +276,4 @@ INSERT INTO public.products (id, name, price, in_stock, currency, description, i
 INSERT INTO public.products (id, name, price, in_stock, currency, description, images, gender) VALUES ('39d0f55b-e572-405f-b686-247ce05743c7', 'HIGHLANDER Men Grey & Black Striped Round Neck T-shirt', 699, true, 'INR', 'Grey and Black striped T-shirt\, has round neck\, short sleeves', 'http://assets.myntassets.com/assets/images/10004169/2019/8/5/808863a5-125e-42f1-89b3-700005a9094c1565005877432-HIGHLANDER-Men-Grey--Black-Striped-Round-Neck-T-shirt-764156-1.jpg ~ http://assets.myntassets.com/assets/images/10004169/2019/8/5/ddca0b95-9f45-411b-be6e-2763c5fd207d1565005877406-HIGHLANDER-Men-Grey--Black-Striped-Round-Neck-T-shirt-764156-2.jpg ~ http://assets.myntassets.com/assets/images/10004169/2019/8/5/a1b0879c-fc7b-4354-97f7-1ca9844faf1d1565005877380-HIGHLANDER-Men-Grey--Black-Striped-Round-Neck-T-shirt-764156-3.jpg ~ http://assets.myntassets.com/assets/images/10004169/2019/8/5/8904a145-4f45-42ca-a2ae-0e370cb246691565005877342-HIGHLANDER-Men-Grey--Black-Striped-Round-Neck-T-shirt-764156-4.jpg ~ http://assets.myntassets.com/assets/images/10004169/2019/8/5/a115d5c0-0e6f-4645-9758-8bd10031ebfa1565005877299-HIGHLANDER-Men-Grey--Black-Striped-Round-Neck-T-shirt-764156-5.jpg', 'Men');
 
 
---
--- TOC entry 3643 (class 0 OID 16785)
--- Dependencies: 214
--- Data for Name: review; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
-INSERT INTO public.review (id, user_id, product_id, title, review_desc, rating) VALUES ('013855c1-3008-4583-95a7-8c48c508b1e2', 'e5702df2-42d7-4e9e-bab9-0aebbebd7a3d', '6a91c4c7-ca35-4dad-87ad-bea164962c93', 'awesome', 'good product', 5);
-INSERT INTO public.review (id, user_id, product_id, title, review_desc, rating) VALUES ('c78324ae-c564-46a6-a8a5-890e812429bd', 'e5702df2-42d7-4e9e-bab9-0aebbebd7a3d', 'f33f5d14-22e4-473e-9721-61801818784a', 'hi', '', 5);
-
-
---
--- TOC entry 3638 (class 0 OID 16707)
--- Dependencies: 209
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.users (id, user_name, user_email, user_password, avatar, phone, first_name, last_name, is_admin) VALUES ('e5702df2-42d7-4e9e-bab9-0aebbebd7a3d', 'chouglesaud', 'saudchougle.sc@gmail.com', '$2b$10$nMZPHsMR8v2/ippX1HvR9O9PCDDeEbX8uJdf2f6JZ2ZtjZj2eCw2.', 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png', '123456789', 'saud', 'chougle', false);
-
-
---
--- TOC entry 3644 (class 0 OID 16805)
--- Dependencies: 215
--- Data for Name: wishlist; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.wishlist (id, user_id, product_id, is_fav) VALUES ('d84d2baf-a32e-4099-96d5-d982901e6335', 'e5702df2-42d7-4e9e-bab9-0aebbebd7a3d', 'a6b42788-5d71-4792-b86b-66c1f1174c98', true);
-INSERT INTO public.wishlist (id, user_id, product_id, is_fav) VALUES ('d8b9e351-bfed-444b-b513-aafaaf883c41', 'e5702df2-42d7-4e9e-bab9-0aebbebd7a3d', 'f4c1ea08-e57b-41f7-80da-1eedc57be81a', false);
-INSERT INTO public.wishlist (id, user_id, product_id, is_fav) VALUES ('f29267d1-24d7-4edc-9d78-60c5189ce2b1', 'e5702df2-42d7-4e9e-bab9-0aebbebd7a3d', 'c337f481-f0d8-429c-9ae8-9c1325e9c465', true);
-INSERT INTO public.wishlist (id, user_id, product_id, is_fav) VALUES ('62c43cba-9ba1-4b57-a913-126743b59521', 'e5702df2-42d7-4e9e-bab9-0aebbebd7a3d', '137ed948-1afe-4806-89fe-84de4213a95f', true);
-INSERT INTO public.wishlist (id, user_id, product_id, is_fav) VALUES ('6634e885-6f12-4954-9428-633f47c2baca', 'e5702df2-42d7-4e9e-bab9-0aebbebd7a3d', 'b2d3bd7b-7b33-408f-943a-52ab7939c867', true);
-INSERT INTO public.wishlist (id, user_id, product_id, is_fav) VALUES ('b5cbdc99-5be2-4e65-8fdf-46e2921fc490', 'e5702df2-42d7-4e9e-bab9-0aebbebd7a3d', 'ff552b6a-8c85-4ab9-9924-efbaa2b725a1', true);
-INSERT INTO public.wishlist (id, user_id, product_id, is_fav) VALUES ('6a78892e-0766-45e1-b9ab-e078294ebb30', 'e5702df2-42d7-4e9e-bab9-0aebbebd7a3d', '2d6582d7-c6e0-49c9-bc89-94b3e4617d54', false);
-INSERT INTO public.wishlist (id, user_id, product_id, is_fav) VALUES ('c0a938b5-7ca6-4b97-9946-16b73a7baac4', 'e5702df2-42d7-4e9e-bab9-0aebbebd7a3d', '6a91c4c7-ca35-4dad-87ad-bea164962c93', true);
